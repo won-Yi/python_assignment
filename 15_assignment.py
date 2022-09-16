@@ -1,41 +1,40 @@
 #조건문
 
+def get_grade(score):
+    if score > 90 :
+        return "A"
+    elif score > 80:
+        return "B"
+    elif score > 70:
+        return "C"
+    else:
+        return "F"
 
-# def get_grade(score):
-#     if score > 90 :
-#         return "A"
-#     elif score > 80:
-#         return "B"
-#     elif score > 70:
-#         return "C"
-#     else:
-#         return "F"
-#
-# score = int(input())
-# grade = get_grade(score)
-# print(grade)
+score = int(input())
+grade = get_grade(score)
+print(grade)
 
 
 # 반복문 while
-# def twice_input():
-#     count = 0
-#     while True:
-#         input_num = input()
-#         count += 1
-#         try:
-#             num = int(input_num)
-#             print(num * 2)
-#         except ValueError:
-#             if input_num == 'exit':
-#                 return
-#
-#             print(f'입력한 문자는 {input_num}입니다.')
-#         finally:
-#             if count >= 5:
-#                 return
-#
-#
-# twice_input()
+def twice_input():
+    count = 0
+    while True:
+        input_num = input()
+        count += 1
+        try:
+            num = int(input_num)
+            print(num * 2)
+        except ValueError:
+            if input_num == 'exit':
+                return
+
+            print(f'입력한 문자는 {input_num}입니다.')
+        finally:
+            if count >= 5:
+                return
+
+
+twice_input()
 
 
 
